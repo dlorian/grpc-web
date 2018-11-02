@@ -1,0 +1,31 @@
+{
+  "name": "@dlorian/grpc-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "grpc.build": "docker build -t grpc-generate -f grpcweb.Dockerfile .",
+    "grpc.generate": "docker run -v \"/protofile:/protofile\" -e \"protofile=helloworld.proto\" grpc-generate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dlorian/grpc-web.git"
+  },
+  "author": "dlorian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dlorian/grpc-web/issues"
+  },
+  "homepage": "https://github.com/dlorian/grpc-web#readme",
+  "devDependencies": {
+    "@grpc/proto-loader": "^0.3.0",
+    "google-protobuf": "^3.6.1",
+    "grpc": "^1.15.0",
+    "grpc-web": "^1.0.0",
+    "protobuf-compiler": "^1.0.2",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {}
+}
